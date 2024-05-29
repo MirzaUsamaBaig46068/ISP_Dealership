@@ -23,7 +23,8 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies (Popper.js and Bootstrap) -->
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -77,7 +78,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><i class="fas fa-play-circle"></i>Direct Stream<sup class="text-secondary"
+                <h1 class="text-primary m-0"><img src="img/logo.png" class=""></img>Direct Stream<sup class="text-secondary"
                         style="font-size: small; top: -1em;">One</sup></h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
@@ -462,37 +463,26 @@
                     <div class="appointment-form rounded p-5">
                         <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
                         <h1 class="display-5 mb-4">Sign-Up Today</h1>
-                        <form>
+                        <form id="email-form">
                             <div class="row gy-3 gx-4">
                                 <div class="col-xl-6">
-                                    <input type="text"
+                                    <input type="text" id="name" name="name"
                                         class="form-control py-3 border-primary bg-transparent text-white"
                                         placeholder="First Name">
                                 </div>
                                 <div class="col-xl-6">
-                                    <input type="email"
+                                    <input type="email" id="email" name="email"
                                         class="form-control py-3 border-primary bg-transparent text-white"
                                         placeholder="Email">
                                 </div>
                                 <div class="col-xl-6">
-                                    <input type="phone" class="form-control py-3 border-primary bg-transparent"
-                                        placeholder="Phone">
+                                    <input type="phone" id="phone" name="phone"
+                                        class="form-control py-3 border-primary bg-transparent" placeholder="Phone">
                                 </div>
-                                <!-- <div class="col-xl-6">
-                                    <select class="form-select py-3 border-primary bg-transparent"
-                                        aria-label="Default select example">
-                                        <option selected>Your Gender</option>
-                                        <option value="1">Male</option>
-                                        <option value="2">FeMale</option>
-                                        <option value="3">Others</option>
-                                    </select>
-                                </div> -->
-                                <!-- <div class="col-xl-6">
-                                    <input type="date" class="form-control py-3 border-primary bg-transparent">
-                                </div> -->
                                 <div class="col-xl-6">
-                                    <select class="form-select py-3 border-primary bg-transparent" aria-placeholder="I get from?"
-                                        aria-label="Default select example">
+                                    <select id="source" name="source"
+                                        class="form-select py-3 border-primary bg-transparent"
+                                        aria-placeholder="I get from?" aria-label="Default select example">
                                         <option selected value="1">Facebook</option>
                                         <option value="2">Google</option>
                                         <option value="3">Refer by Friend</option>
@@ -500,11 +490,13 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-primary bg-transparent text-white" name="text"
-                                        id="area-text" cols="30" rows="5" placeholder="Write Comments"></textarea>
+                                    <textarea required class="form-control border-primary bg-transparent text-white"
+                                        name="text" id="area-text" cols="30" rows="5"
+                                        placeholder="Write Comments"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">Sign-Up</button>
+                                    <button type="submit"
+                                        class="btn btn-primary text-white w-100 py-3 px-5">Sign-Up</button>
                                 </div>
                             </div>
                         </form>
@@ -874,10 +866,26 @@
     </div>
     <!-- Copyright End -->
 
+    <!-- Toast -->
+    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast fixed-bottom m-5 ms-auto"
+        data-bs-autohide="true">
+        <div class=" toast-header">
+            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="16" width="12.5" viewBox="0 0 448 512"><path fill="#15b9d9" d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/></svg>
+            <strong class="me-auto">Notification</strong>
+            <small>Just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body"></div>
+    </div>
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -886,6 +894,35 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('https://directstreamone.com/send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .then(data => {
+                const toastLiveExample = document.querySelector('.toast');
+                const toastBody = document.querySelector('.toast-body');
+                toastBody.textContent = 'Email has been sent!';
+                const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+                toastBootstrap.show();
+                //window.alert("Email has been sent!");
+            })
+            .catch(error => {
+                window.alert('Email sending failed.');
+            });
+        });
+
+    </script>
     <script src="js/main.js"></script>
 </body>
 
