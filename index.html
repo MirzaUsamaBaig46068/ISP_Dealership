@@ -78,8 +78,8 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><img src="img/logo.png" class=""></img>Direct Stream<sup class="text-secondary"
-                        style="font-size: small; top: -1em;">One</sup></h1>
+                <h1 class="text-primary m-0"><img src="img/logo.png" class=""></img>Direct Stream<sup
+                        class="text-secondary" style="font-size: small; top: -1em;">One</sup></h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -117,7 +117,7 @@
                     <div class="carousel-caption-content p-3">
                         <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Welcome to
                             [Business Name].</h5>
-                        <h1 class="display-1 text-capitalize text-white mb-4">Your Premier ISP Authorized Dealer</h1>
+                        <h1 class="display-1 text-capitalize text-white mb-4">Your Premier Authorized Dealer</h1>
                         <p class="mb-5 fs-5">We specialize in providing tailored B2B distribution
                             solutions that empower businesses to thrive in the competitive telecommunications market.
                         </p>
@@ -126,12 +126,12 @@
                 </div>
             </div>
             <div class="header-carousel-item">
-                <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                <img src="img/carousel-2.webp" class="img-fluid w-100" alt="Image">
                 <div class="carousel-caption">
                     <div class="carousel-caption-content p-3">
                         <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Welcome to
                             [Business Name].</h5>
-                        <h1 class="display-1 text-capitalize text-white mb-4">Your Premier ISP Authorized Dealer</h1>
+                        <h1 class="display-1 text-capitalize text-white mb-4">Your Premier Authorized Dealer</h1>
                         <p class="mb-5 fs-5">We specialize in providing tailored B2B distribution
                             solutions that empower businesses to thrive in the competitive telecommunications market.
                         </p>
@@ -152,10 +152,11 @@
                     <h4 class="sub-title px-3 mb-0">What We Do</h4>
                 </div>
                 <h1 class="display-3 mb-4">Master Distributor for B2B Partnerships.</h1>
-                <p class="mb-0">At [Business Name], your trusted partner for B2B ISP distribution
-                    solutions in the USA. As a leading master distributor specializing in business-to-business
-                    relations,
-                    we are committed to helping your business thrive in the competitive telecommunications market.</p>
+                <p class="mb-0">
+                    At [Business Name], your trusted partner for solar panel and ISP distribution solutions in the USA,
+                    we are committed to helping your business thrive in the competitive market. As a leading master
+                    distributor specializing in business-to-business relations, we offer comprehensive solar panel
+                    solutions tailored to meet your unique needs.</p>
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
@@ -870,7 +871,10 @@
     <div role="alert" aria-live="assertive" aria-atomic="true" class="toast fixed-bottom m-5 ms-auto"
         data-bs-autohide="true">
         <div class=" toast-header">
-            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="16" width="12.5" viewBox="0 0 448 512"><path fill="#15b9d9" d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/></svg>
+            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="16" width="12.5" viewBox="0 0 448 512">
+                <path fill="#15b9d9"
+                    d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
+            </svg>
             <strong class="me-auto">Notification</strong>
             <small>Just now</small>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -902,24 +906,24 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => {
-                if (response.ok) {
-                    return response.text();
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .then(data => {
-                const toastLiveExample = document.querySelector('.toast');
-                const toastBody = document.querySelector('.toast-body');
-                toastBody.textContent = 'Email has been sent!';
-                const toastBootstrap = new bootstrap.Toast(toastLiveExample);
-                toastBootstrap.show();
-                //window.alert("Email has been sent!");
-            })
-            .catch(error => {
-                window.alert('Email sending failed.');
-            });
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .then(data => {
+                    const toastLiveExample = document.querySelector('.toast');
+                    const toastBody = document.querySelector('.toast-body');
+                    toastBody.textContent = 'Email has been sent!';
+                    const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+                    toastBootstrap.show();
+                    //window.alert("Email has been sent!");
+                })
+                .catch(error => {
+                    window.alert('Email sending failed.');
+                });
         });
 
     </script>
