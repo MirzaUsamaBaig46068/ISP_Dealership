@@ -671,7 +671,7 @@
         document.getElementById('email-form').addEventListener('submit', function (event) {
             event.preventDefault();
             var formData = new FormData(this);
-            fetch('https://directstreamone.com/v1/send-email-to-visitor.php', {
+            fetch('https://directstreamone.com/send_email.php', {
                 method: 'POST',
                 body: formData
             })
