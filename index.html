@@ -27,10 +27,52 @@
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Bootstrap JS and dependencies (Popper.js and Bootstrap) -->
     <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>.partners .swiper {
+        border-top: 1px solid #efa286;
+        padding: 10px 40px 20px;
+      }
+      .partners .swiper-slide {
+        display: grid;
+        place-items: center;
+        height: 150px;
+      }
+      .partners .swiper-slide img {
+        transition: box-shadow 0.3s;
+        padding: 10px;
+        width: 220px;
+      }
+      .partners .swiper-slide img:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      }
+      .partners .btn-prev, .partners .btn-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        border: none;
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        border-radius: 50%;
+        background: #00111b;
+        z-index: 555;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      }
+      .partners .btn-prev:hover, .partners .btn-next:hover {
+        opacity: 1;
+      }
+      .partners .btn-prev {
+        right: auto;
+        left: 0;
+      }</style>
 </head>
 
 <body>
@@ -50,10 +92,11 @@
         <div class="row gx-0 align-items-center" style="height: 45px;">
             <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                 <div class="d-flex flex-wrap">
-                    <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A
+                    <a href="contact.html#GetInTouch" class="text-light me-4"><i
+                            class="fas fa-map-marker-alt text-primary me-2"></i>Find A
                         Location</a>
-                    <a href="#" class="text-light me-4"><i
-                            class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                    <a href="tel:+1 (855) 900-69950" class="text-light me-4"><i
+                            class="fas fa-phone-alt text-primary me-2"></i>+1 (855) 900-69950</a>
                     <a href="#" class="text-light me-0"><i
                             class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
                 </div>
@@ -81,8 +124,8 @@
                 <h1 class="text-primary m-0">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                     <i class="fas fa-play-circle"></i>
-                    Direct Stream<sup class="text-secondary"
-                        style="font-size: small; top: -1em;">One</sup></h1>
+                    Direct Stream<sup class="text-secondary" style="font-size: small; top: -1em;">One</sup>
+                </h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -95,13 +138,17 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dealerships</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Spectrum</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> At&amp;t</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> DirecTV</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Frontier</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> ViaSat</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Earthlink</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Windstream</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>Sun run</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>Vivint</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>Spectrum </a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>At&t</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>DirecTV </a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>Windstream </a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>Frontier </a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>CenturyLink </a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>ViaSat</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i>Hughesnet</a>
+
                         </div>
                     </div>
                     <a href="about.html" class="nav-item nav-link">About</a>
@@ -217,198 +264,15 @@
         <div class="section-title">
             <div class="sub-style">
                 <h4 class="sub-title text-white py-3 px-3 mb-0">Seeking Sub-Dealers with Call Centers</h4>
-            <!-- <div class="brd"></div> -->
+                <!-- <div class="brd"></div> -->
             </div>
-            <p class="text-white py-1">DirectStream is looking for sub-dealers who can effectively sell our products through their call centers. If you have a robust call center operation and are looking to expand your product offerings, we want to partner with you.</p>
-            
+            <p class="text-white py-1">DirectStream is looking for sub-dealers who can effectively sell our products
+                through their call centers. If you have a robust call center operation and are looking to expand your
+                product offerings, we want to partner with you.</p>
+
         </div>
     </div>
     <!-- Looking for End -->
-
-    <!-- About Start -->
-    <!-- <div class="container-fluid about bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="about-img pb-5 ps-5">
-                        <img src="img/about-1.jpg" class="img-fluid rounded w-100" style="object-fit: cover;"
-                            alt="Image">
-                        <div class="about-img-inner">
-                            <img src="img/about-2.jpg" class="img-fluid rounded-circle w-100 h-100" alt="Image">
-                        </div>
-                        <div class="about-experience">15 years experience</div>
-                    </div>
-                </div>
-                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
-                    <div class="section-title text-start mb-5">
-                        <h4 class="sub-title pe-3 mb-0">About Us</h4>
-                        <h1 class="display-5 mb-4">Revolutionizes how businesses EXPAND and PROSPER.</h1>
-                        <p>
-                            At Direct Stream One, we pride ourselves on being a trusted master distributor for leading
-                            ISPs across the USA. With years of industry experience and a commitment to excellence,
-                            we have established ourselves as the go-to partner for ISPs seeking reliable distribution
-                            channels.
-                        </p>
-                        <div class="mb-4">
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Tailored B2B
-                                partnership solutions.</p>
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Expertise in the
-                                telecom industry.</p>
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Empowering
-                                businesses to thrive.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- About End -->
-
-    <!-- Feature Start -->
-    <!-- <div class="container-fluid feature py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">Why Choose Us</h4>
-                </div>
-                <h1 class="display-5 mb-4">Elevate Your Business with Us</h1>
-                <p class="mb-0">"Experience top-tier B2B solutions tailored to your success
-                    in the dynamic telecom landscape. Choose us for exceptional expertise and commitment, elevating your
-                    business to new heights."</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-comments fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Transparent Communication</h5>
-                                <p class="mb-0">We prioritize clear and open communication, ensuring you are informed
-                                    and involved every step of the way.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-hands-helping fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Customized Support</h5>
-                                <p class="mb-0">Get personalized support tailored to your unique business needs,
-                                    guaranteeing solutions that fit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-chart-line fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Continuous Improvement</h5>
-                                <p class="mb-0">Dedicated to ongoing improvement, constantly refining strategies and
-                                    processes to deliver maximum value.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-cogs fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Industry-Leading Technology</h5>
-                                <p class="mb-0">Access cutting-edge technology and tools that drive efficiency,
-                                    innovation, and competitive advantage.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-tools fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Proactive Problem-Solving</h5>
-                                <p class="mb-0">Anticipating challenges before they arise, we proactively develop
-                                    solutions to keep your business on track and ahead of the curve.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-expand-arrows-alt fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Scalability</h5>
-                                <p class="mb-0">Our solutions are designed to grow with your business, providing
-                                    scalability and flexibility to adapt to changing needs and expansion plans.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Cost-Effective Solutions</h5>
-                                <p class="mb-0">We offer cost-effective solutions that maximize your ROI, ensuring that
-                                    every investment contributes to your business's long-term success.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-chalkboard-teacher fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Comprehensive Training and Resources</h5>
-                                <p class="mb-0">Gain access to comprehensive training and resources to empower your team
-                                    and maximize the impact of our partnership on your business growth.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Feature End -->
 
     <!-- Book Appointment Start -->
     <div id="joinUs" class="container-fluid appointment py-5">
@@ -521,109 +385,6 @@
     </div>
     <!-- Book Appointment End -->
 
-    <!-- Team Start -->
-    <!-- <div class="container-fluid team py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">Meet our team</h4>
-                </div>
-                <h1 class="display-5 mb-4">ISP Services for Authorized Dealers</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque
-                    sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam
-                    necessitatibus saepe in ab? Repellat!</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">CEO & Founder</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">Co-Founder</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">Region Sales Manager(RSM)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">Area Sales Manager(ASM)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
-
-
     <!-- Testimonial Start -->
     <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -637,14 +398,18 @@
                 <div class="testimonial-item">
                     <div class="testimonial-inner p-5">
                         <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
+                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="">
                         </div>
-                        <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
-                            nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed
-                            voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
+                        <p class="text-white fs-7">"I've been in the renewable energy sector for over a decade, and
+                            partnering with Sunrun through this master partnership has been a game-changer for my
+                            business. The seamless integration of their state-of-the-art solar panels with our services
+                            has allowed us to offer top-notch solutions to our clients. The support and resources
+                            provided have been outstanding, and the financial benefits have exceeded our expectations.
+                            This partnership has truly empowered us to make a significant impact in promoting
+                            sustainable energy."
                         </p>
                         <div class="text-center">
-                            <h5 class="mb-2">John Abraham</h5>
+                            <h5 class="mb-2">John D., Renewable Energy Consultant</h5>
                             <p class="mb-2 text-white-50">New York, USA</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-secondary"></i>
@@ -659,14 +424,18 @@
                 <div class="testimonial-item">
                     <div class="testimonial-inner p-5">
                         <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
+                            <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="">
                         </div>
-                        <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
-                            nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed
-                            voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
+                        <p class="text-white fs-7">"Partnering with Vivint for home security solutions has transformed
+                            our offerings and significantly boosted customer satisfaction. The cutting-edge technology
+                            and innovative products they provide are second to none. Our clients love the reliability
+                            and advanced features of Vivint's systems, and the training and support from their team have
+                            been exceptional. This partnership has not only enhanced our service portfolio but also
+                            strengthened our reputation as a trusted security provider. We're thrilled to continue
+                            growing together."
                         </p>
                         <div class="text-center">
-                            <h5 class="mb-2">John Abraham</h5>
+                            <h5 class="mb-2">Sarah M., Home Security Specialist</h5>
                             <p class="mb-2 text-white-50">New York, USA</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-secondary"></i>
@@ -681,14 +450,18 @@
                 <div class="testimonial-item">
                     <div class="testimonial-inner p-5">
                         <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
+                            <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="">
                         </div>
-                        <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
-                            nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed
-                            voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
+                        <p class="text-white fs-7">"Teaming up with this business for ISP services has been an
+                            incredible opportunity for us. The comprehensive packages they offer have enabled us to
+                            provide our customers with reliable and high-speed internet solutions tailored to their
+                            needs. The collaboration has been smooth, with excellent communication and support
+                            throughout. The ability to leverage their expertise and infrastructure has allowed us to
+                            expand our reach and improve customer satisfaction. This partnership has truly been a
+                            win-win for our business and our clients."
                         </p>
                         <div class="text-center">
-                            <h5 class="mb-2">John Abraham</h5>
+                            <h5 class="mb-2">Michael B., Telecommunications Business Owner</h5>
                             <p class="mb-2 text-white-50">New York, USA</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-secondary"></i>
@@ -705,85 +478,66 @@
     </div>
     <!-- Testimonial End -->
 
-
-    <!-- Blog Start -->
-    <!-- <div class="container-fluid blog py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- Slider Start -->
+    <section class="partners py-5 border-top border-bottom">
+        <div class="container text-center">
+            <div class="section-title mb-5">
                 <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">Our Blog</h4>
+                    <h4 class="sub-title text-primary px-3 mb-0">Our Partners</h4>
                 </div>
-                <h1 class="display-5 mb-4">The Lucrative World of ISP Dealership</h1>
-                <p class="mb-0">In today's digitally driven world, Internet Service Providers (ISPs)
-                    play a crucial role in keeping businesses and individuals connected. Behind the scenes,
-                    a network of dealerships fuels the distribution of these essential services,
-                    presenting lucrative opportunities for entrepreneurs looking to tap into this booming industry.</p>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-1.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 04 May 2024
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 8
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Lucrative Income Streams</a>
-                            <p class="my-4">Partnering with ISPs as a dealership opens doors to multiple income streams.
-                                From selling internet packages to offering value-added services like installation and
-                                maintenance,
-                                dealerships can generate substantial revenue.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-2.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 03 May 2024
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 7
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Low Overhead Costs</a>
-                            <p class="my-4">Unlike traditional businesses that require significant upfront investments
-                                in infrastructure and inventory,
-                                ISP dealerships often have low overhead costs. Entrepreneurs can start their dealership
-                                venture with relative ease and low costs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-3.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 02 May 2024
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 6
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Flexibility and Autonomy</a>
-                            <p class="my-4">Dealerships offer entrepreneurs the freedom to operate their businesses on
-                                their own terms.
-                                From setting their own prices to creating tailored marketing strategies,
-                                dealerships provide autonomy and flexibility in decision-making.</p>
-                        </div>
-                    </div>
+            <div class="col-lg-10 mx-auto mt-4 position-relative">
+                <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper" id="swiper-wrapper-4b686ef1cb95d83a" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-1850px, 0px, 0px); display: -webkit-box;">
+                    <div class="swiper-slide" role="group" aria-label="1 / 9" data-swiper-slide-index="0" style="width: 330px; margin-right: 40px;">
+                            <a href="">
+                                <img src="https://internetcableservice.com/assets/logo/CenturyLink-574.png" loading="lazy" class="img-fluid" alt="CenturyLink">
+                            </a>
+                        </div><div class="swiper-slide" role="group" aria-label="2 / 9" data-swiper-slide-index="1" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/spectrum">
+                                <img src="https://internetcableservice.com/assets/logo/Charter-Spectrum-591.png" loading="lazy" class="img-fluid" alt="Spectrum">
+                            </a>
+                        </div><div class="swiper-slide" role="group" aria-label="3 / 9" data-swiper-slide-index="2" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/earthlink-internet">
+                                <img src="https://internetcableservice.com/assets/logo/earthlink.png" loading="lazy" class="img-fluid" alt="earthlink">
+                            </a>
+                        </div><div class="swiper-slide" role="group" aria-label="4 / 9" data-swiper-slide-index="3" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/frontier">
+                                <img src="https://internetcableservice.com/assets/logo/Frontier-Communications-1293.png" loading="lazy" class="img-fluid" alt="Frontier">
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="5 / 9" data-swiper-slide-index="4" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/hughesnet">
+                                <img src="https://internetcableservice.com/assets/logo/hughes.png" loading="lazy" class="img-fluid" alt="hughesnet">
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-active" role="group" aria-label="6 / 9" data-swiper-slide-index="5" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/viasat">
+                                <img src="https://internetcableservice.com/assets/logo/Viasat.png" loading="lazy" class="img-fluid" alt="Viasat">
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-next" role="group" aria-label="7 / 9" data-swiper-slide-index="6" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/windstream">
+                                <img src="https://internetcableservice.com/assets/logo/windstream.png" loading="lazy" class="img-fluid" alt="windstream">
+                            </a>
+                        </div><div class="swiper-slide" role="group" aria-label="8 / 9" data-swiper-slide-index="7" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/xfinity">
+                                <img src="https://internetcableservice.com/assets/logo/xfinity-comcast-logo.png" loading="lazy" class="img-fluid" alt="xfinity">
+                            </a>
+                        </div><div class="swiper-slide" role="group" aria-label="9 / 9" data-swiper-slide-index="8" style="width: 330px; margin-right: 40px;">
+                            <a href="https://wifiinternet.org/att">
+                                <img src="https://internetcableservice.com/assets/logo/AT&amp;T_logo_2016.svg.png" loading="lazy" class="img-fluid" alt="AT&amp;T">
+                            </a>
+                        </div></div>
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 6" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
+
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                <div class="d-flex justify-content-end gap-2 mt-2">
+                    <button class="btn-prev text-primary" onclick="swiper.slidePrev()"><i class="fa fa-chevron-left"></i></button>
+                    <button class="btn-next text-primary" onclick="swiper.slideNext()"><i class="fa fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Blog End -->
+    </section>
+    <!-- Slider End -->
 
 
     <!-- Footer Start -->
@@ -794,8 +548,8 @@
                     <div class="footer-item d-flex flex-column">
                         <h4 class="text-primary mb-4"><i class="fas fa-play-circle"></i> Direct Stream<sup
                                 class="text-secondary" style="font-size: small; top: -1em;">One</sup></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem impedit eos autem
-                            dolores laudantium quia, qui similique
+                        <p>
+                            Together, let's drive success and innovation for your business and your customers!
                         </p>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-share fa-2x text-white me-2"></i>
@@ -836,11 +590,12 @@
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="mb-4 text-white">Contact Info</h4>
-                        <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
+                        <a href=""><i class="fa fa-map-marker-alt me-2"></i> 11088 Trask ave
+                            Garden Grove Ca</a>
                         <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
                         <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                        <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                        <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                        <a href="tel:+1 (855) 900-69950"><i class="fas fa-phone me-2"></i> +1 (855) 900-69950</a>
+
                     </div>
                 </div>
             </div>
@@ -880,10 +635,9 @@
     <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -893,10 +647,30 @@
 
     <!-- Template Javascript -->
     <script>
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView : 1,
+        spaceBetween : 40,
+        autoplay : {
+           delay: 1800,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable : true,
+        },
+        breakpoints : {
+            668 : {
+                slidesPerView : 2,
+            },
+            1200 : {
+                slidesPerView : 3,
+            }
+        }
+        });
         document.getElementById('email-form').addEventListener('submit', function (event) {
             event.preventDefault();
             var formData = new FormData(this);
-            fetch('https://directstreamone.com/send_email.php', {
+            fetch('https://directstreamone.com/v1/send-email-to-visitor.php', {
                 method: 'POST',
                 body: formData
             })
