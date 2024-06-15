@@ -29,16 +29,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = 'tls';
         $mail->Port       = '587';//getenv('SMTP_PORT');
         $mail->SMTPOptions = array(
-    'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
+                                  'ssl' => array(
+                                  'verify_peer' => false,
+                                  'verify_peer_name' => false,
+                                  'allow_self_signed' => true
     )
 );
         
         // Recipients
         $mail->setFrom('team@directstreamone.com', 'Support Team');//getenv('SMTP_USERNAME')
-        $mail->addAddress('usamamirza11999@gmail.com', 'Usama User');
+        $mail->addAddress($email, $name);
 
         // Content
         $mail->isHTML(true);
