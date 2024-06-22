@@ -12,9 +12,10 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
+        <link rel="preload" href="https://directstreamone.com/img/carousel-1.jpg" as="image">
+        <link rel="preload" href="https://directstreamone.com/img/carousel-2.webp" as="image">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -120,7 +121,7 @@
         <!-- Carousel Start -->
         <div class="header-carousel owl-carousel">
             <div class="header-carousel-item">
-                <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="USA Map">
+                <img src="img/carousel-1.jpg" loading="lazy" class="img-fluid w-100" alt="USA Map">
                 <div class="carousel-caption">
                     <div class="carousel-caption-content p-3">
                         <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Welcome to
@@ -135,7 +136,7 @@
                 </div>
             </div>
             <div class="header-carousel-item">
-                <img src="img/carousel-2.webp" class="img-fluid w-100" alt="Home solar panels">
+                <img src="img/carousel-2.webp" loading="lazy" class="img-fluid w-100" alt="Home solar panels">
                 <div class="carousel-caption">
                     <div class="carousel-caption-content p-3">
                         <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;"></h5>
@@ -300,10 +301,10 @@
                                     <select id="source" name="source"
                                         class="form-select py-3 border-primary bg-transparent"
                                         aria-placeholder="I get from?" aria-label="Default select example">
-                                        <option selected value="1">Facebook</option>
-                                        <option value="2">Google</option>
-                                        <option value="3">Refer by Friend</option>
-                                        <option value="4">Other</option>
+                                        <option selected value="Facebook">Facebook</option>
+                                        <option value="Google">Google</option>
+                                        <option value="Refer by Friend">Refer by Friend</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
@@ -672,10 +673,11 @@
                 }
             }
         });
+        
         /*document.getElementById('email-form').addEventListener('submit', function (event) {
             event.preventDefault();
             var formData = new FormData(this);
-            fetch('https://directstreamone.com/send_email.php', {
+            fetch('https://directstreamone.com/v1/send-email-to-internal-team.php', {
                 method: 'POST',
                 body: formData
             })
@@ -726,8 +728,8 @@
                 const toastBody = document.querySelector('.toast-body');
 
                 // Update the toast message content based on both responses
-                if (visitorData.includes('success') && internalTeamData.includes('success')) {
-                    toastBody.textContent = 'Emails have been sent!';
+                if (visitorResponse.ok && internalTeamResponse.ok) {
+                    toastBody.textContent = 'Email has been sent!';
                 } else {
                     toastBody.textContent = 'One or both emails sending failed.';
                 }

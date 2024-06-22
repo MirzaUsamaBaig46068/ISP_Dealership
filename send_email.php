@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';  // Adjust the path to autoload.php if necessary
-require 'vendor/'
+
 loadEnv(__DIR__ . '/.env');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
