@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';  // Adjust the path to autoload.php if necessary
-
+require 'vendor/'
 loadEnv(__DIR__ . '/.env');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Recipients
         $mail->setFrom('team@directstreamone.com', 'Support Team');//getenv('SMTP_USERNAME');,getenv('SMTP_HOSTNAME');
         $mail->addAddress($email, $name);
+        $mail->addEmbeddedImage('https://directstreamone.com/img/play-circle-solid.svg', 'LogoImage');
 
         // Content
         $mail->isHTML(true);
@@ -223,8 +224,6 @@ background-color: #fff;
             </tbody>
         </table>
     </div>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src='https://use.fontawesome.com/releases/v5.15.4/js/all.js'></script>
 </body></html>";
       
         $mail->AltBody = 'This is the body in styled text for HTML mail clients';

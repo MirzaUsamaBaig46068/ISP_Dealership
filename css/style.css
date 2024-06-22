@@ -16,7 +16,55 @@
 /*** Spinner End ***/
 
 /*** Swapper Start ***/
+.partners .swiper {
+    border-top: 1px solid #efa286;
+    padding: 10px 40px 20px;
+}
 
+.partners .swiper-slide {
+    display: grid;
+    place-items: center;
+    height: 150px;
+}
+
+.partners .swiper-slide img {
+    transition: box-shadow 0.3s;
+    padding: 10px;
+    width: 220px;
+}
+
+.partners .swiper-slide img:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.partners .btn-prev,
+.partners .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    border: none;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50%;
+    background: #00111b;
+    z-index: 555;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.partners .btn-prev:hover,
+.partners .btn-next:hover {
+    opacity: 1;
+}
+
+.partners .btn-prev {
+    right: auto;
+    left: 0;
+}
 /*** Swapper End ***/
 
 /*** cta Start ***/
@@ -56,14 +104,15 @@
 
  @media (max-width: 768px)
 {
-    .cta .sub-title::after, .cta .section-title .sub-style::after
+    .sub-title::after, .cta .section-title .sub-style::after
     {
         display: none;
     }
-    .cta .sub-title::before, .cta .section-title .sub-style::before
+    .sub-title::before, .cta .section-title .sub-style::before
     {
         display: none;
     }
+
 }
 
 /*** cta End ***/
@@ -239,6 +288,9 @@
 @media (max-width: 576px) {
     .topbar {
         display: none;
+    }
+    .navbar {
+        padding-right: 0 !important;
     }
 }
 
