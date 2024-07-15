@@ -99,16 +99,18 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dealerships</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Sun run</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Vivint</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Spectrum </a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> At&t</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> DirecTV </a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Windstream </a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Frontier </a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> CenturyLink </a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> ViaSat</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-angle-right"></i> Hughesnet</a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('Sunrun')"><i
+                                    class="fas fa-angle-right"></i>
+                                Sun run</a>
+                            <a class="dropdown-item btn" onclick="checkSignup('Vivint')"><i class="fas fa-angle-right"></i> Vivint</a>
+                            <a class="dropdown-item btn" onclick="checkSignup('Spectrum')"><i class="fas fa-angle-right"></i> Spectrum </a>
+                            <a class="dropdown-item btn" onclick="checkSignup('att')"><i class="fas fa-angle-right"></i> At&t</a>
+                            <a class="dropdown-item btn" onclick="checkSignup('DirecTV')"><i class="fas fa-angle-right"></i> DirecTV </a>
+                            <a class="dropdown-item btn" onclick="checkSignup('Windstream')"><i class="fas fa-angle-right"></i> Windstream </a>
+                            <a class="dropdown-item btn" onclick="checkSignup('Frontier')"><i class="fas fa-angle-right"></i> Frontier </a>
+                            <a class="dropdown-item btn" onclick="checkSignup('CenturyLink')"><i class="fas fa-angle-right"></i> CenturyLink </a>
+                            <a class="dropdown-item btn" onclick="checkSignup('ViaSat')"><i class="fas fa-angle-right"></i> ViaSat</a>
+                            <a class="dropdown-item btn" onclick="checkSignup('Hughesnet')"><i class="fas fa-angle-right"></i> Hughesnet</a>
                         </div>
                     </div>
                     <a href="about.html" class="nav-item nav-link">About</a>
@@ -653,6 +655,7 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- Template Javascript -->
     <script>
@@ -734,6 +737,7 @@
 
                 // Update the toast message content based on both responses
                 if (visitorResponse.ok && internalTeamResponse.ok) {
+                    localStorage.setItem('success', true);
                     toastBody.textContent = 'Email has been sent!';
                 } else {
                     toastBody.textContent = 'One or both emails sending failed.';
@@ -747,10 +751,7 @@
                 window.alert('Email sending failed. Please try again later.');
             }
         });
-
-
     </script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner(0);
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -34,8 +34,8 @@
         smartSpeed: 1000,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
@@ -49,8 +49,8 @@
         dots: true,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ]
@@ -83,44 +83,64 @@
         dots: true,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:1
+            768: {
+                items: 1
             },
-            992:{
-                items:1
+            992: {
+                items: 1
             },
-            1200:{
-                items:1
+            1200: {
+                items: 1
             }
         }
     });
 
-    
-    
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 })(jQuery);
 
+function checkSignup(pageUrl) {
+    var token = localStorage.getItem('success');
+    if(token)
+    {
+        window.location.assign("pages/" + pageUrl + "/index.html");
+    }
+    else
+    {
+        window.location.assign("index.html#joinUs")
+        toast('Signup is required for these pages!');
+    }
+}
+
+function toast(Message) {
+    const toastLiveExample = document.querySelector('.toast');
+    const toastBody = document.querySelector('.toast-body');
+    toastBody.textContent = Message;
+    const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+    toastBootstrap.show();
+}
