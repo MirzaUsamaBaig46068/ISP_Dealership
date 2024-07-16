@@ -83,11 +83,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-2 px-lg-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
                 <h1 class="text-primary m-0">
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
                     <i class="fas fa-play-circle"></i>
                     Direct Stream<sup class="text-secondary" style="font-size: small; top: -1em;">One</sup>
                 </h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -97,20 +95,33 @@
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="dealerships.html" class="nav-item nav-link">Become a Partner</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dealerships</a>
-                        <div class="dropdown-menu m-0">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            Dealerships
+                        </a>
+                        <div class="dropdown-menu m-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                            aria-expanded="false" data-bs-title="Signup required!">
                             <a href="#" class="dropdown-item" onclick="checkSignup('Sunrun')"><i
                                     class="fas fa-angle-right"></i>
                                 Sun run</a>
-                            <a class="dropdown-item btn" onclick="checkSignup('Vivint')"><i class="fas fa-angle-right"></i> Vivint</a>
-                            <a class="dropdown-item btn" onclick="checkSignup('Spectrum')"><i class="fas fa-angle-right"></i> Spectrum </a>
-                            <a class="dropdown-item btn" onclick="checkSignup('att')"><i class="fas fa-angle-right"></i> At&t</a>
-                            <a class="dropdown-item btn" onclick="checkSignup('DirecTV')"><i class="fas fa-angle-right"></i> DirecTV </a>
-                            <a class="dropdown-item btn" onclick="checkSignup('Windstream')"><i class="fas fa-angle-right"></i> Windstream </a>
-                            <a class="dropdown-item btn" onclick="checkSignup('Frontier')"><i class="fas fa-angle-right"></i> Frontier </a>
-                            <a class="dropdown-item btn" onclick="checkSignup('CenturyLink')"><i class="fas fa-angle-right"></i> CenturyLink </a>
-                            <a class="dropdown-item btn" onclick="checkSignup('ViaSat')"><i class="fas fa-angle-right"></i> ViaSat</a>
-                            <a class="dropdown-item btn" onclick="checkSignup('Hughesnet')"><i class="fas fa-angle-right"></i> Hughesnet</a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('Vivint')"><i
+                                    class="fas fa-angle-right"></i> Vivint</a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('Spectrum')"><i
+                                    class="fas fa-angle-right"></i> Spectrum </a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('att')"><i
+                                    class="fas fa-angle-right"></i>
+                                At&t</a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('DirecTV')"><i
+                                    class="fas fa-angle-right"></i> DirecTV </a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('Windstream')"><i
+                                    class="fas fa-angle-right"></i> Windstream </a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('Frontier')"><i
+                                    class="fas fa-angle-right"></i> Frontier </a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('CenturyLink')"><i
+                                    class="fas fa-angle-right"></i> CenturyLink </a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('ViaSat')"><i
+                                    class="fas fa-angle-right"></i> ViaSat</a>
+                            <a href="#" class="dropdown-item" onclick="checkSignup('Hughesnet')"><i
+                                    class="fas fa-angle-right"></i> Hughesnet</a>
                         </div>
                     </div>
                     <a href="about.html" class="nav-item nav-link">About</a>
@@ -585,16 +596,36 @@
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="mb-4 text-white">Partner Links</h4>
-                        <a href="#"><i class="fas fa-angle-right"></i> Sun run</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Vivint</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Spectrum </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> At&t</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> DirecTV </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Windstream </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Frontier </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> CenturyLink </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> ViaSat</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Hughesnet</a>
+                        <a onclick="checkSignup('sunrun')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> Sun run</a>
+                        <a onclick="checkSignup('vivint')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> Vivint</a>
+                        <a onclick="checkSignup('spectrum')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> Spectrum </a>
+                        <a onclick="checkSignup('att')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> At&t</a>
+                        <a onclick="checkSignup('directv')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> DirecTV </a>
+                        <a onclick="checkSignup('windstream')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> Windstream </a>
+                        <a onclick="checkSignup('frontier')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> Frontier </a>
+                        <a onclick="checkSignup('centurylink')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> CenturyLink </a>
+                        <a onclick="checkSignup('viaSat')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> ViaSat</a>
+                        <a onclick="checkSignup('hughesnet')" style="cursor: pointer;" data-bs-toggle="tooltip"
+                            data-bs-placement="left" aria-expanded="false" data-bs-title="Signup required!"><i
+                                class="fas fa-angle-right"></i> Hughesnet</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
