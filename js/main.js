@@ -126,18 +126,16 @@
 
 function checkSignup(pageUrl) {
     var token = localStorage.getItem('success');
-    if (token) {
+    if(token)
+    {
         window.location.assign("pages/" + pageUrl + "/index.html");
     }
-    else {
-        window.location.assign("index.html#joinUs");
-        //setTimeout({}, 500);
+    else
+    {
+        window.location.assign("index.html#joinUs")
         toast('Signup is required for these pages!');
     }
 }
-
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 function toast(Message) {
     const toastLiveExample = document.querySelector('.toast');
