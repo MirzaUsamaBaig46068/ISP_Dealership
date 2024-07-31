@@ -15,8 +15,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="preload" href="https://directstreamone.com/img/carousel-1.jpg" as="image">
-    <link rel="preload" href="https://directstreamone.com/img/carousel-2.webp" as="image">
+    <link href="https://directstreamone.com/img/carousel-1.jpg" as="image">
+    <link href="https://directstreamone.com/img/carousel-2.webp" as="image">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -26,7 +26,7 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <!-- Bootstrap JS and dependencies (Popper.js and Bootstrap) -->
     <!-- Customized Bootstrap Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
@@ -46,7 +46,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
@@ -102,38 +101,43 @@
                         </a>
                         <div class="dropdown-menu m-0" data-bs-toggle="tooltip" data-bs-placement="top"
                             aria-expanded="false" data-bs-title="Signup required!">
-                            <a href="#" class="dropdown-item" onclick="checkSignup('Sunrun')"><i
+                            <a href="AuthorizedRetailerProgram/Sunrun.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i>
                                 Sun run</a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('Vivint')"><i
+                            <a href="AuthorizedRetailerProgram/Vivint.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> Vivint</a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('Spectrum')"><i
+                            <a href="AuthorizedRetailerProgram/Spectrum.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> Spectrum </a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('att')"><i
+                            <a href="AuthorizedRetailerProgram/Att.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i>
                                 At&t</a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('DirecTV')"><i
+                            <a href="AuthorizedRetailerProgram/DirecTV.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> DirecTV </a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('Windstream')"><i
+                            <a href="AuthorizedRetailerProgram/Windstream.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> Windstream </a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('Frontier')"><i
+                            <a href="AuthorizedRetailerProgram/Frontier.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> Frontier </a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('CenturyLink')"><i
+                            <a href="AuthorizedRetailerProgram/CenturyLink.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> CenturyLink </a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('ViaSat')"><i
+                            <a href="AuthorizedRetailerProgram/Viasat.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> ViaSat</a>
-                            <a href="#" class="dropdown-item" onclick="checkSignup('Hughesnet')"><i
+                            <a href="AuthorizedRetailerProgram/Hughesnet.html" class="dropdown-item"><i
                                     class="fas fa-angle-right"></i> Hughesnet</a>
                         </div>
                     </div>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+
+                    <div id="google_translate_element" style="display:none;"></div>
+                    <div class="nav-item nav-link">
+                        <span style="cursor: pointer;" onclick="translatePage('en')">EN</span> |
+                        <span style="cursor: pointer;" onclick="translatePage('es')">ES</span>
+                    </div>
                 </div>
                 <a href="index.html#joinUs"
                     class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Join Us!</a>
             </div>
         </nav>
-
         <!-- Carousel Start -->
         <div class="header-carousel owl-carousel">
             <div class="header-carousel-item">
@@ -173,15 +177,13 @@
         <div class="container py-5">
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="sub-style">
-                    <h4 class="sub-title px-2 mb-0">What We Offer</h4>
+                    <h4 class="sub-title px-2 mb-0">What We Are</h4>
                 </div>
-                <h1 class="display-5 mb-4">Master Distributor for B2B Partnerships.</h1>
-                <p class="mb-0">
-                    At Direct Stream One, your trusted partner for solar panel and ISP distribution solutions in the
-                    USA,
-                    we are committed to helping your business thrive in the competitive market. As a leading master
-                    distributor specializing in business-to-business relations, we offer comprehensive solar panel
-                    solutions tailored to meet your unique needs.</p>
+                <h2 class="mb-4">Master Dealer Partner for Top Solar, Home Security, and Telecom Providers</h2>
+                <p class="mb-0">We are a leading master distributor specializing in
+                    business-to-business partnerships. We provide top-tier solutions in solar energy, home security, and
+                    telecom, supporting our partners with comprehensive products and services to help them thrive in
+                    their markets.</p>
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
@@ -191,9 +193,9 @@
                         </div>
                         <div class="service-content rounded-bottom bg-light p-4">
                             <div class="service-content-inner">
-                                <h5 class="mb-4">Solar Panels (Sunrun / Lumio)</h5>
+                                <h5 class="mb-4">Solar Panels</h5>
                                 <p class="mb-4">Partner with us to offer your customers the benefits of clean, renewable
-                                    energy through Sunrun's industry-leading solar solutions.</p>
+                                    energy through industry-leading solar solutions.</p>
                                 <!--<a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>-->
                             </div>
                         </div>
@@ -206,8 +208,8 @@
                         </div>
                         <div class="service-content rounded-bottom bg-light p-4">
                             <div class="service-content-inner">
-                                <h5 class="mb-4">Home Security Systems (Vivint)</h5>
-                                <p class="mb-4">Enhance your offerings with Vivint's innovative home security systems,
+                                <h5 class="mb-4">Home Security Systems</h5>
+                                <p class="mb-4">Enhance your offerings with innovative home security systems,
                                     ensuring peace of mind for your clients.</p>
                                 <!--<a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>-->
                             </div>
@@ -221,7 +223,7 @@
                         </div>
                         <div class="service-content rounded-bottom bg-light p-4">
                             <div class="service-content-inner">
-                                <h5 class="mb-4">Phone, Internet & TV Services (Top 10)</h5>
+                                <h5 class="mb-4">Telecom</h5>
                                 <p class="mb-4">Deliver a complete package by including reliable phone, internet, and TV
                                     services tailored to your customers' needs.</p>
                                 <!--<a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>-->
@@ -234,66 +236,16 @@
     </div>
     <!-- Services End -->
 
-    <!-- Looking for Start -->
-    <div class="container-fluid cta">
-        <div class="section-title">
-            <div class="sub-style">
-                <h4 class="sub-title text-white py-3 px-3 mb-0">Seeking Sub-Dealers with Call Centers</h4>
-                <!-- <div class="brd"></div> -->
-            </div>
-            <p class="text-white py-1">DirectStream is looking for sub-dealers who can effectively sell our products
-                through their call centers. If you have a robust call center operation and are looking to expand your
-                product offerings, we want to partner with you.</p>
-
-        </div>
-    </div>
-    <!-- Looking for End -->
-
     <!-- Book Appointment Start -->
     <div id="joinUs" class="container-fluid appointment py-5">
         <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-                    <div class="section-title text-start">
-                        <h4 class="sub-title pe-3 mb-0">Addressing<br> Your Challenges</h4>
-                        <h1 class="display-4 mb-4">Best Quality Services With Minimal Rate</h1>
-                        <p class="mb-4">"Experience unparalleled quality services at incredibly affordable rates.
-                            We prioritize delivering exceptional value without compromising on excellence, ensuring your
-                            satisfaction with every interaction."</p>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex flex-column h-100">
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> High Speed
-                                            Internet
-                                        </h5>
-                                        <p class="mb-0">"Experience blazing-fast internet speeds with our high-speed
-                                            internet services for seamless online connectivity."</p>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Premium Tv
-                                            Channels
-                                        </h5>
-                                        <p class="mb-0">"Unlock a range of premium TV channels for unparalleled
-                                            entertainment and viewing experience."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="video h-100">
-                                    <img src="img/video-img.jpg" class="img-fluid rounded w-100 h-100"
-                                        style="object-fit: cover;" alt="">
-                                    <button type="button" class="btn btn-play" data-bs-toggle="modal"
-                                        data-src="https://www.youtube.com/embed/SfGV7eNRwNs"
-                                        data-bs-target="#videoModal">
-                                        <span></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="section-title mb-4 mt- 2 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="sub-style">
+                    <h4 class="sub-title px-2 mb-0">Signup Now</h4>
                 </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+            </div>
+            <div class="row g-5 align-items-center">
+                <div class="align-items-center wow fadeInRight" data-wow-delay="0.4s">
                     <div class="appointment-form rounded p-5">
                         <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
                         <h1 class="display-5 mb-4">Sign-Up Today</h1>
@@ -301,19 +253,20 @@
                             <div class="row gy-3 gx-4">
                                 <div class="col-xl-6">
                                     <input type="text" id="name" name="name"
-                                        class="form-control py-3 border-primary bg-transparent text-white"
+                                        class="form-control py-3 border-primary bg-transparent text-dark"
                                         placeholder="First Name">
                                 </div>
                                 <div class="col-xl-6">
                                     <input type="email" id="email" name="email"
-                                        class="form-control py-3 border-primary bg-transparent text-white"
+                                        class="form-control py-3 border-primary bg-transparent text-dark"
                                         placeholder="Email">
                                 </div>
                                 <div class="col-xl-6">
                                     <input type="phone" id="phone" name="phone"
-                                        class="form-control py-3 border-primary bg-transparent" placeholder="Phone">
+                                        class="form-control py-3 border-primary bg-transparent text-dark"
+                                        placeholder="Phone">
                                 </div>
-                                <div class="col-xl-6">
+                                <div class="col-xl-6 text-dark">
                                     <select id="source" name="source"
                                         class="form-select py-3 border-primary bg-transparent"
                                         aria-placeholder="I get from?" aria-label="Default select example">
@@ -324,7 +277,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea required class="form-control border-primary bg-transparent text-white"
+                                    <textarea required class="form-control border-primary bg-transparent text-dark"
                                         name="text" id="area-text" cols="30" rows="5"
                                         placeholder="Write Comments"></textarea>
                                 </div>
@@ -339,119 +292,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal Video -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                            allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Book Appointment End -->
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title mb-5">
-                <div class="sub-style">
-                    <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
-                </div>
-                <h1 class="display-5 mb-4">What Clients are Say</h1>
-            </div>
-            <div class="testimonial-carousel owl-carousel">
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">"I've been in the renewable energy sector for over a decade, and
-                            partnering with Sunrun through this master partnership has been a game-changer for my
-                            business. The seamless integration of their state-of-the-art solar panels with our services
-                            has allowed us to offer top-notch solutions to our clients. The support and resources
-                            provided have been outstanding, and the financial benefits have exceeded our expectations.
-                            This partnership has truly empowered us to make a significant impact in promoting
-                            sustainable energy."
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">John D., Renewable Energy Consultant</h5>
-                            <p class="mb-2 text-white-50">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">"Partnering with Vivint for home security solutions has transformed
-                            our offerings and significantly boosted customer satisfaction. The cutting-edge technology
-                            and innovative products they provide are second to none. Our clients love the reliability
-                            and advanced features of Vivint's systems, and the training and support from their team have
-                            been exceptional. This partnership has not only enhanced our service portfolio but also
-                            strengthened our reputation as a trusted security provider. We're thrilled to continue
-                            growing together."
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">Sarah M., Home Security Specialist</h5>
-                            <p class="mb-2 text-white-50">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">"Teaming up with this business for ISP services has been an
-                            incredible opportunity for us. The comprehensive packages they offer have enabled us to
-                            provide our customers with reliable and high-speed internet solutions tailored to their
-                            needs. The collaboration has been smooth, with excellent communication and support
-                            throughout. The ability to leverage their expertise and infrastructure has allowed us to
-                            expand our reach and improve customer satisfaction. This partnership has truly been a
-                            win-win for our business and our clients."
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">Michael B., Telecommunications Business Owner</h5>
-                            <p class="mb-2 text-white-50">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
 
     <!-- Slider Start -->
     <section class="container-fluid partners py-5 border-top border-bottom">
@@ -468,64 +308,64 @@
                         style="transition-duration: 0ms; transform: translate3d(-1850px, 0px, 0px); display: -webkit-box;">
                         <div class="swiper-slide" role="group" aria-label="3 / 9" data-swiper-slide-index="2"
                             style="width: 330px; margin-right: 40px;">
-                            <a href="">
+                            <a href="AuthorizedRetailerProgram/Sunrun.html">
                                 <img src="img/Logos/sunrun.jpeg" loading="lazy" class="img-fluid" alt="Sun run">
                             </a>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="8 / 9" data-swiper-slide-index="7"
                             style="width: 330px; margin-right: 40px;">
-                            <a href="">
+                            <a href="AuthorizedRetailerProgram/Vivint.html">
                                 <img src="img/Logos/vivint.png" loading="lazy" class="img-fluid" alt="Vivint">
                             </a>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="2 / 9" data-swiper-slide-index="1"
                             style="width: 330px; margin-right: 40px;">
-                            <a href="">
+                            <a href="AuthorizedRetailerProgram/Spectrum.html">
                                 <img src="img/Logos/Charter-Spectrum.png" loading="lazy" class="img-fluid"
                                     alt="Spectrum">
                             </a>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="9 / 9" data-swiper-slide-index="8"
                             style="width: 330px; margin-right: 40px;">
-                            <a href="">
+                            <a href="AuthorizedRetailerProgram/Att.html">
                                 <img src="img/Logos/AT&T_logo.svg" loading="lazy" class="img-fluid" alt="AT&amp;T">
                             </a>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="9 / 9" data-swiper-slide-index="8"
                             style="width: 330px; margin-right: 40px;">
-                            <a href="">
+                            <a href="AuthorizedRetailerProgram/DirecTV.html">
                                 <img src="img/Logos/DirecTV.png" loading="lazy" class="img-fluid" alt="DirecTV">
                             </a>
                         </div>
                         <div class="swiper-slide swiper-slide-next" role="group" aria-label="7 / 9"
                             data-swiper-slide-index="6" style="width: 330px; margin-right: 40px;">
-                            <a href="">
-                                <img src="img/Logos/kinetic-logo.svg" loading="lazy" class="img-fluid" alt="windstream">
+                            <a href="AuthorizedRetailerProgram/Windstream.html">
+                                <img src="img/Logos/kinetic-logo.svg" loading="lazy" class="img-fluid" alt="Windstream">
                             </a>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="4 / 9" data-swiper-slide-index="3"
                             style="width: 330px; margin-right: 40px;">
-                            <a href="">
+                            <a href="AuthorizedRetailerProgram/Frontier.html">
                                 <img src="img/Logos/Frontier-Communications.png" loading="lazy" class="img-fluid"
                                     alt="Frontier">
                             </a>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="1 / 9" data-swiper-slide-index="0"
                             style="width: 330px; margin-right: 40px;">
-                            <a href="">
+                            <a href="AuthorizedRetailerProgram/CenturyLink.html">
                                 <img src="img/Logos/CenturyLink.png" loading="lazy" class="img-fluid" alt="CenturyLink">
                             </a>
                         </div>
                         <div class="swiper-slide swiper-slide-active" role="group" aria-label="6 / 9"
                             data-swiper-slide-index="5" style="width: 330px; margin-right: 40px;">
-                            <a href="">
-                                <img src="img/Logos/viasat.png" loading="lazy" class="img-fluid" alt="Viasat">
+                            <a href="AuthorizedRetailerProgram/Viasat.html">
+                                <img src="img/Logos/viasat.png" loading="lazy" class="img-fluid" alt="ViaSat">
                             </a>
                         </div>
                         <div class="swiper-slide swiper-slide-prev" role="group" aria-label="5 / 9"
                             data-swiper-slide-index="4" style="width: 330px; margin-right: 40px;">
-                            <a href="">
-                                <img src="img/Logos/HughesNet.png" loading="lazy" class="img-fluid" alt="hughesnet">
+                            <a href="AuthorizedRetailerProgram/Hughesnet.html">
+                                <img src="img/Logos/HughesNet.png" loading="lazy" class="img-fluid" alt="HughesNet">
                             </a>
                         </div>
                     </div>
@@ -598,16 +438,21 @@
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="mb-4 text-white">Partner Links</h4>
-                        <a href="#"><i class="fas fa-angle-right"></i> Sun run</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Vivint</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Spectrum </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> At&t</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> DirecTV </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Windstream </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Frontier </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> CenturyLink </a>
-                        <a href="#"><i class="fas fa-angle-right"></i> ViaSat</a>
-                        <a href="#"><i class="fas fa-angle-right"></i> Hughesnet</a>
+                        <a href="AuthorizedRetailerProgram/Sunrun.html"><i class="fas fa-angle-right"></i> Sun run</a>
+                        <a href="AuthorizedRetailerProgram/Vivint.html"><i class="fas fa-angle-right"></i> Vivint</a>
+                        <a href="AuthorizedRetailerProgram/Spectrum.html"><i class="fas fa-angle-right"></i>
+                            Spectrum</a>
+                        <a href="AuthorizedRetailerProgram/Att.html"><i class="fas fa-angle-right"></i> At&t</a>
+                        <a href="AuthorizedRetailerProgram/DirecTV.html"><i class="fas fa-angle-right"></i> DirecTV</a>
+                        <a href="AuthorizedRetailerProgram/Windstream.html"><i class="fas fa-angle-right"></i>
+                            Windstream</a>
+                        <a href="AuthorizedRetailerProgram/Frontier.html"><i class="fas fa-angle-right"></i>
+                            Frontier</a>
+                        <a href="AuthorizedRetailerProgram/CenturyLink.html"><i class="fas fa-angle-right"></i>
+                            CenturyLink</a>
+                        <a href="AuthorizedRetailerProgram/Viasat.html"><i class="fas fa-angle-right"></i> ViaSat</a>
+                        <a href="AuthorizedRetailerProgram/Hughesnet.html"><i class="fas fa-angle-right"></i>
+                            Hughesnet</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
@@ -659,6 +504,8 @@
     <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>

@@ -64,17 +64,17 @@
             $videoSrc = $(this).data("src");
         });
         //console.log($videoSrc);
-
+        
         $('#videoModal').on('shown.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
         })
-
+        
         $('#videoModal').on('hide.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc);
         })
     });
-
-
+    
+    
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -107,35 +107,22 @@
             }
         }
     });
-
-
-
+    
+    
+    
     // Back to top button
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 200) {
             $('.back-to-top').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
         return false;
     });
 })(jQuery);
-
-function checkSignup(pageUrl) {
-    var token = localStorage.getItem('success');
-    if(token)
-    {
-        window.location.assign("pages/" + pageUrl + "/index.html");
-    }
-    else
-    {
-        window.location.assign("index.html#joinUs")
-        toast('Signup is required for these pages!');
-    }
-}
 
 function toast(Message) {
     const toastLiveExample = document.querySelector('.toast');
@@ -143,4 +130,18 @@ function toast(Message) {
     toastBody.textContent = Message;
     const toastBootstrap = new bootstrap.Toast(toastLiveExample);
     toastBootstrap.show();
+}
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en'
+    }, 'google_translate_element');
+}
+
+function translatePage(language) {
+    var translateElement = document.querySelector('.goog-te-combo');
+    if (translateElement) {
+        translateElement.value = language;
+        translateElement.dispatchEvent(new Event('change'));
+    }
 }
