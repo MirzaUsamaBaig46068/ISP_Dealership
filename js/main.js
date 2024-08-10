@@ -64,17 +64,62 @@
             $videoSrc = $(this).data("src");
         });
         //console.log($videoSrc);
-        
+
         $('#videoModal').on('shown.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
         })
-        
+
         $('#videoModal').on('hide.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc);
         })
+
+        $('#email-form').on('submit', async function (event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            for (let [key, value] of formData.entries()) {
+                console.log(key, value);
+            }
+            try {
+                const [visitorResponse, internalTeamResponse] = await Promise.all([
+                    fetch('https://directstreamone.com/v1/send-email-to-visitor.php', {
+                        method: 'POST',
+                        body: formData
+                    }),
+                    fetch('https://directstreamone.com/v1/send-email-to-internal-team.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                ]);
+
+                if (!visitorResponse.ok || !internalTeamResponse.ok) {
+                    throw new Error('One or both network responses were not ok');
+                }
+
+                const visitorData = await visitorResponse.text();
+                const internalTeamData = await internalTeamResponse.text();
+
+                const toastLiveExample = document.querySelector('.toast');
+                const toastBody = document.querySelector('.toast-body');
+
+                // Update the toast message content based on both responses
+                if (visitorResponse.ok && internalTeamResponse.ok) {
+                    localStorage.setItem('success', true);
+                    toastBody.textContent = 'Email has been sent!';
+                } else {
+                    toastBody.textContent = 'One or both emails sending failed.';
+                }
+                this.reset();
+                // Show the toast notification
+                const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+                toastBootstrap.show();
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+                window.alert('Email sending failed. Please try again later.');
+            }
+        });
     });
-    
-    
+
+
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -107,9 +152,9 @@
             }
         }
     });
-    
-    
-    
+
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {

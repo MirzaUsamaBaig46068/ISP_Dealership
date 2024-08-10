@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 );
         
         // Recipients
-        $mail->setFrom('team@directstreamone.com', 'Support Team');//getenv('SMTP_USERNAME');,getenv('SMTP_HOSTNAME');
+        $mail->setFrom('support@directstreamone.com', 'Support Team');//getenv('SMTP_USERNAME');,getenv('SMTP_HOSTNAME');
         $mail->addAddress($email, $name);
         $mail->addEmbeddedImage('https://directstreamone.com/img/play-circle-solid.svg', 'LogoImage');
 

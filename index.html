@@ -33,14 +33,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -55,10 +54,10 @@
                     <a href="https://maps.app.goo.gl/p7gbPHZ4YWwKaESC8" target="_blank" class="text-light me-4"><i
                             class="fas fa-map-marker-alt text-primary me-2"></i>Find A
                         Location</a>
-                    <a href="tel:+1 (855) 900-69950" class="text-light me-4"><i
-                            class="fas fa-phone-alt text-primary me-2"></i>+1 (855) 900-69950</a>
-                    <a href="mailto:team@directstreamone.com" class="text-light me-0"><i
-                            class="fas fa-envelope text-primary me-2"></i>team@directstreamone.com</a>
+                    <!-- <a href="tel:+1 (855) 900-69950" class="text-light me-4"><i
+                            class="fas fa-phone-alt text-primary me-2"></i>+1 (855) 900-69950</a> -->
+                    <a href="mailto:support@directstreamone.com" class="text-light me-0"><i
+                            class="fas fa-envelope text-primary me-2"></i>support@directstreamone.com</a>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
@@ -460,9 +459,9 @@
                         <h4 class="mb-4 text-white">Contact Info</h4>
                         <a href=""><i class="fa fa-map-marker-alt me-2"></i> 11088 Trask ave
                             Garden Grove Ca</a>
-                        <a href="mailto:team@directstreamone.com"><i class="fas fa-envelope me-2"></i>
-                            team@directstreamone.com</a>
-                        <a href="tel:+1 (855) 900-69950"><i class="fas fa-phone me-2"></i> +1 (855) 900-69950</a>
+                        <a href="mailto:support@directstreamone.com"><i class="fas fa-envelope me-2"></i>
+                            support@directstreamone.com</a>
+                        <!-- <a href="tel:+1 (855) 900-69950"><i class="fas fa-phone me-2"></i> +1 (855) 900-69950</a> -->
 
                     </div>
                 </div>
@@ -515,7 +514,7 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.obfuscated.js"></script>
 
     <!-- Template Javascript -->
     <script>
@@ -566,51 +565,6 @@
                     window.alert('Email sending failed.');
                 });
         });*/
-
-        document.getElementById('email-form').addEventListener('submit', async function (event) {
-            event.preventDefault();
-            var formData = new FormData(this);
-            for (let [key, value] of formData.entries()) {
-                console.log(key, value);
-            }
-            try {
-                const [visitorResponse, internalTeamResponse] = await Promise.all([
-                    fetch('https://directstreamone.com/v1/send-email-to-visitor.php', {
-                        method: 'POST',
-                        body: formData
-                    }),
-                    fetch('https://directstreamone.com/v1/send-email-to-internal-team.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                ]);
-
-                if (!visitorResponse.ok || !internalTeamResponse.ok) {
-                    throw new Error('One or both network responses were not ok');
-                }
-
-                const visitorData = await visitorResponse.text();
-                const internalTeamData = await internalTeamResponse.text();
-
-                const toastLiveExample = document.querySelector('.toast');
-                const toastBody = document.querySelector('.toast-body');
-
-                // Update the toast message content based on both responses
-                if (visitorResponse.ok && internalTeamResponse.ok) {
-                    localStorage.setItem('success', true);
-                    toastBody.textContent = 'Email has been sent!';
-                } else {
-                    toastBody.textContent = 'One or both emails sending failed.';
-                }
-
-                // Show the toast notification
-                const toastBootstrap = new bootstrap.Toast(toastLiveExample);
-                toastBootstrap.show();
-            } catch (error) {
-                console.error('There has been a problem with your fetch operation:', error);
-                window.alert('Email sending failed. Please try again later.');
-            }
-        });
     </script>
 </body>
 
